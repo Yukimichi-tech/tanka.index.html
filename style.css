@@ -1,0 +1,75 @@
+/* まずはページ全体の基本設定 */
+body {
+    background-color: #1a1a1a; /* 背景を少し柔らかい黒に */
+    color: #f0f0f0;            /* 文字の色を少し柔らかい白に */
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif; /* 綺麗な明朝体系フォントを指定 */
+    line-height: 1.8;         /* 行と行の間を少し広げて読みやすくする */
+}
+
+/* <h1>（メインタイトル）のデザイン */
+h1 {
+    text-align: center; /* 中央揃えにする */
+    font-weight: normal;  /* 文字の太さを普通にする */
+    letter-spacing: 0.1em; /* 文字と文字の間を少し広げる */
+    border-bottom: 1px solid #555; /* 下に一本、区切り線を入れる */
+    padding-bottom: 10px;          /* 区切り線との間に余白を作る */
+}
+
+/* <main>（コンテンツ全体）のレイアウト */
+main {
+    max-width: 600px;  /* コンテンツの最大幅を600pxに設定 */
+    width: 90%;        /* 基本は画面幅の90%で表示 */
+    margin: 40px auto; /* 上下に40pxの余白、左右はautoで中央揃えにする魔法の呪文 */
+}
+
+/* <article>（一つの短歌）のデザイン */
+article {
+    background-color: #2a2a2a; /* 記事の背景を少し明るい黒に */
+    padding: 20px 30px;        /* 内側に余白を作って、文字が壁にくっつかないようにする */
+    border-radius: 5px;        /* 角を少しだけ丸くする */
+}
+
+/* <h2>（短歌そのもの）のデザイン */
+h2 {
+    font-size: 1.5rem; 
+    margin: 0 auto 30px auto; /* 上、左右（自動）、下の順で余白を設定 */
+    height: 350px;            /* 縦書きのエリアの高さを確保 */
+    writing-mode: vertical-rl; /* ★これが縦書きにする魔法のプロパティ！ */
+    text-align: left;          /* 縦書きの場合、leftで上揃えになる */
+}
+
+/* <p>（作者名や日付など）のデザイン */
+p {
+    font-size: 0.9rem; /* 少し文字を小さくする */
+    text-align: right; /* 右揃えにする */
+}
+
+/* いいねセクションのデザイン */
+.like-section {
+    text-align: center; /* 中央揃え */
+    margin-top: 30px; /* 上に余白をとる */
+}
+
+/* いいねボタンのデザイン */
+#likeButton {
+    background-color: #f0f0f0; /* 背景を白っぽく */
+    color: #1a1a1a;           /* 文字を黒っぽく */
+    border: none;              /* 枠線を消す */
+    padding: 10px 20px;        /* 内側の余白 */
+    border-radius: 20px;       /* 角を丸くしてカプセル型に */
+    cursor: pointer;           /* カーソルを乗せると指マークになる */
+    font-weight: bold;         /* 文字を太く */
+    transition: background-color 0.3s; /* 背景色が0.3秒かけて変わるアニメーション */
+}
+
+/* ボタンにカーソルを乗せた時のデザイン */
+#likeButton:hover {
+    background-color: #c0c0c0; /* 少し暗い色にする */
+}
+
+/* いいね数のデザイン */
+#likeCount {
+    margin-left: 10px; /* ボタンとの間に余白をとる */
+    font-size: 1.2rem;   /* 少し文字を大きく */
+    font-weight: bold;   /* 文字を太く */
+}
