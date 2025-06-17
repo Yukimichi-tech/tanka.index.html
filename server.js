@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json()); // JSON形式のリクエストを扱えるようにする
 
 // データベースに接続（冷蔵庫を設置）
-const db = new sqlite3.Database('./database.db');
+const db = new sqlite3.Database('/data/database.db');
 
 // 最初に一度だけ、データベースにテーブル（棚）を作る
 db.serialize(() => {
